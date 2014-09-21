@@ -5,16 +5,11 @@ import macros._
 import org.scalatest.FunSuite
 
 @TableDef class UserTable(val ds: DataSource) extends Table {
-  //import shapeless.{::, HNil, HList}
-
   val sqlTableName = "A_USER"
 
   val id = TableColumnLong("id")
   val caption = TableColumnString("sCaption")
   val description = TableColumnStringOption("sDescription")
-
-  //override val test: SelectType = 1L :: "Vasya" :: None :: HNil
-
 
 /*
   @TableDef class UserTableNested/*(val ds: DataSource)*/ extends Table {
@@ -27,7 +22,6 @@ import org.scalatest.FunSuite
     val caption = TableColumnString("sCaption2")
     val description = TableColumnStringOption("sDescription2")
 
-    //override val test: SelectType = 2L :: "Vasya2" :: None :: HNil
   }
 */
 

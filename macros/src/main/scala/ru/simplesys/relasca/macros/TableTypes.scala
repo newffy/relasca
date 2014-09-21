@@ -47,19 +47,6 @@ trait SQLRelation {
   def columns: IndexedSeq[TableColumn[_]]
 }
 
-
-/*
-trait FieldValueTypes[F <: HList, V <: HList]
-
-object FieldValueTypes {
-  implicit val nilFieldValueTypes: FieldValueTypes[HNil, HNil] = new FieldValueTypes[HNil, HNil] {}
-
-  implicit def hlistFieldValueTypes[FH <: TableColumn[_], FT <: HList, VT <: HList](implicit next: FieldValueTypes[FT, VT]): FieldValueTypes[FH :: FT, FH#TSimpleType :: VT] = new FieldValueTypes[FH :: FT, FH#TSimpleType :: VT] {}
-}
-
-
-*/
-
 trait Table extends SQLRelation {
   type ProjectionType <: HList
   type SelectType <: HList
